@@ -1,0 +1,9 @@
+/*
+In React, when compiled webpack will automatically patches all
+CSS Prefix; we need not be added all this prefixes manually to CSS.
+This is a great benifit which is not available in Angular by default
+*/
+
+* {
+    color: black;
+}
