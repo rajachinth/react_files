@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
-import './App.css';
-import ComponentOne from './ComponentOne/ComponentOne';
-import ComponentTwo from './ComponentTwo/ComponentTwo';
+import classes from'./App.css';
+import ComponentOne from '../components/ComponentOne/ComponentOne';
+import ComponentTwo from '../components/ComponentTwo/ComponentTwo';
+import ComponentThree from '../components/ComponentThree/ComponentThree';
 import {StyleRoot} from 'radium';
+import ComponentFour from '../components/ComponentFour/ComponentFour';
 
 function App()
 {
@@ -49,7 +51,7 @@ function App()
     return(
        <StyleRoot>
             <div className='App'>
-                <header className='App-header'>
+                <header className={classes.Appheader}>
                     <p>Welcome to React Course</p>
                 </header>
                     <ComponentOne   inputNameChange={ChangeNameHandler}
@@ -59,11 +61,14 @@ function App()
                                     inputClick={ClickHandler}
                                     />
                     <ComponentTwo clear={()=>clearHandler(' ')} 
-                                reset={resetHandler.bind(this,'default')} 
+                                  reset={resetHandler.bind(this,'default')} 
                                 />
+                    <ComponentThree>
+                        <ComponentFour></ComponentFour>
+                    </ComponentThree>
             </div>
        </StyleRoot>
     );
 }
 
-export default App;
+//export default App;

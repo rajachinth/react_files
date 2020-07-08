@@ -1,0 +1,54 @@
+******************************************************************************************************
+In React, there exist two types of components
+    1. Functional component
+    2. Class component
+
+1.Functional component:
+    It's also called as Stateless/Presentation component; as developer one need to
+    ensure that he's dividing the project w=into individual Stateless/Statefull
+    components.
+    It's easy to maintain and be easy to understand the data flow
+    Life cycle hooks are not supported in Function component
+2. Class component:
+    It's also called as Statefull/Container component; to change state, can use the
+    class component.
+    Life cyclehooks are supported in Class component.
+
+***IN Modern React > 16.8, we use React hooks to manipulate the state in function component***
+********************************************************************************************************
+********************************************************************************************************
+*********Component-LifeCycle-Creation**********
+
+Constructor(props)
+getDerivedStateFromProps(props, state) --> to change state of a component when props change
+render()
+render child components
+componentDidMount() -->like http calls etc.,
+
+*********Component-Life-Cycle-Update(Props)***********
+
+getDerivedStateFromProps(props,state)
+shouldComponentUpdate(next props, next state)
+render()
+render child components
+getSnapshotBeforeUpdate(prev props, prev state)
+componentDidUpdate()
+
+*********Component-Life-Cycle-Destroy***********
+
+componentWillUnMount()
+*******************************************************************************************************
+
+*******************************HOW React Renders DOM***************************************************
+Initially; React have two virtual DOM's
+1.Old Virtual DOM
+2.Update Virtual DOM
+
+When ever the main root component or any parent component renders all its child components
+React initially compares the update Virtual DOM with old Virtual DOM
+If any differences found; then React renders that part into the real DOM; but not all elements
+If no difference found; then React will not touch the real DOM;
+
+This how React manages the DOM; since manupulating the real DOM consumes way more-time;
+react will have virtual DOM which is in JS formate; that understand by react.
+********************************************************************************************************

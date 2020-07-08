@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './ComponentTwo.css'
+import classes from './ComponentTwo.css'
 import styled from 'styled-components';
 
 /*
@@ -155,13 +155,13 @@ class ComponentTwo extends Component
                             */
                             this.state.details.map((e,index)=>{
                                 return  <StyleComponentOne key={index}>
-                                                <p className='xx002' >name: {e.name}; age: {e.age}<span onClick={this.deleteHandle.bind(this,index)} className='pname'>X</span></p>
+                                                <p className={classes.xx002} >name: {e.name}; age: {e.age}<span onClick={this.deleteHandle.bind(this,index)} className={classes.pname}>X</span></p>
                                                 <input type='text' 
-                                                    className='xx001'
+                                                    className={classes.xx001}
                                                     placeholder='edit NAME'
                                                     onChange={(event)=>{this.nameChangeHandler(event,index)}}></input>
                                                 <input type='number' 
-                                                    className='xx001'
+                                                    className={classes.xx001}
                                                     placeholder='edit AGE'
                                                     onChange={(event)=>{this.ageChangeHandler(event,index)}}></input>   
                                         </StyleComponentOne>

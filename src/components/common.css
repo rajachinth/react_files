@@ -1,0 +1,31 @@
+.xx01 input {
+    border: 1px solid white;
+    color: red;
+}
+
+.xx01 label {
+    display: block;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    background-color: grey;
+    width: 50%;
+    margin-left: 25%;
+}
+.xx01 *:focus {
+    outline: none;
+}
+.xx01 button {
+    background-color: brown;
+    color: white;
+    border: 2px solid white;
+}
+.xx01 button:hover {
+    cursor: pointer;
+}
+.xx001x span {
+    background-color: grey;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+}   

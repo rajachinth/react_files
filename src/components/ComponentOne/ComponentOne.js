@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './ComponentOne.css';
 import Radium,{StyleRoot} from 'radium';
+import Auxilary from '../HOC/Auxilary';
 
 /*
  Radium is used to get the advantage of using psuedo selectors in In-Line
@@ -84,7 +85,7 @@ function ComponentOne(props)
    
     return(
        <StyleRoot>
-            <div>
+            <Auxilary>
                 <div className={stateValue.stateClass}>
                     <p>{props.name}</p>
                     <input type='text' 
@@ -98,7 +99,7 @@ function ComponentOne(props)
                 <button key='xes01' onClick={props.inputClick}>submit</button>
                 <button style={buttonStyle} key='xes02' onClick={reviewHandler}>review</button>
                 {detailsDiv}
-            </div>
+            </Auxilary>
        </StyleRoot>
     );  
 }

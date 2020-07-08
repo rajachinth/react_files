@@ -1,0 +1,26 @@
+/*
+    :global 
+    It's used to apply styles Globally
+    React will automatically patches all CSS prefixers while rendered in DOM
+
+
+    Media Queries will automatically added to the scoped component using CSS Modules
+*/
+
+.redd {
+    background-color: green;
+}
+.redd:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+    color: black;
+}
+.alert {
+    color: red;
+    font-weight: bold;
+}
+@media only screen and (min-width:100px) {
+    .mediaClass {
+        width: 300px;
+    }
+}
